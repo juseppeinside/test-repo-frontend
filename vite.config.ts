@@ -1,19 +1,20 @@
-import { defineConfig } from 'vite'
-import solid from 'vite-plugin-solid'
+import { defineConfig } from "vite";
+import solid from "vite-plugin-solid";
+import solidSvgPlugin from "vite-plugin-solid-svg";
 
 export default defineConfig({
-  plugins: [solid()],
+  plugins: [solid(), solidSvgPlugin()],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/variables.scss";`,
-      }
-    }
+        additionalData: ``,
+      },
+    },
   },
   server: {
     port: 3000,
   },
   build: {
-    target: 'esnext',
+    target: "esnext",
   },
-})
+});

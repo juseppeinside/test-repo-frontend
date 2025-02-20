@@ -1,0 +1,23 @@
+.switch {
+    @apply relative inline-flex items-center cursor-pointer rounded-full;
+  
+    &.checked {
+      @apply bg-green-300;
+    }
+  
+    &.unchecked {
+      @apply bg-white;
+    }
+  
+    .thumb {
+       
+
+      @apply w-4 h-4 bg-gray-400 rounded-full shadow-md transform transition-transform duration-300;
+  
+    
+
+      &.checked {
+        @apply translate-x-4 bg-green-600;
+      }
+    }
+  }
